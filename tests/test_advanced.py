@@ -7,11 +7,9 @@ def test_positive_foreman_maintain_service_restart(ansible_module):
     :id:
 
     :setup:
-
         1. foreman-maintain should be installed.
 
     :steps:
-
         1. Run foreman-maintain advanced procedure run katello-service restart
 
     :expectedresults: Katello-service should restart.
