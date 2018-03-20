@@ -1,5 +1,5 @@
-from TestFM.health import Health
 from TestFM.advanced import Advanced
+from TestFM.health import Health
 
 
 def test_positive_foreman_maintain_health_list(ansible_module):
@@ -131,12 +131,12 @@ def test_negative_check_hammer_ping(ansible_module):
     """
     setup = ansible_module.command(Advanced.run_katello_service_stop())
     for result in setup.values():
-        print(result['stdout'])
+        assert result['rc'] == 0
     contacted = ansible_module.command(Health.check({
         'label': 'hammer-ping'
     }))
     for result in contacted.values():
-        print(result)
+        print(result['stdout'])
         assert "FAIL" in result['stdout']
     teardown = ansible_module.command(Advanced.run_katello_service_start())
     for result in teardown.values():
