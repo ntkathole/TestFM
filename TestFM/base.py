@@ -41,7 +41,7 @@ class Base(object):
                     val = ','.join(str(el) for el in val)
                 tail += u' --{0}="{1}"'.format(key, val)
 
-        cmd = u'./foreman_maintain/bin/foreman-maintain {0} {1} {2}'.format(
+        cmd = u'foreman-maintain {0} {1} {2}'.format(
             cls.command_base,
             cls.command_sub,
             tail.strip()

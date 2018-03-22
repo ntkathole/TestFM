@@ -1,5 +1,5 @@
 from TestFM.advanced import Advanced
-from TestFM.decorators import run_only_on, stubbed
+from TestFM.decorators import run_only_on
 
 
 def test_positive_foreman_maintain_service_restart(ansible_module):
