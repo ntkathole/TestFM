@@ -137,3 +137,17 @@ class Base(object):
         result = cls._construct_command(options)
 
         return result
+
+    @classmethod
+    def run_hammer_setup(cls, options=None):
+        """Build foreman-maintain advanced procedure run
+         katello-service-restart"""
+
+        cls.command_sub = 'hammer-setup'
+
+        if options is None:
+            options = {}
+
+        result = cls._construct_command(options)
+
+        return result

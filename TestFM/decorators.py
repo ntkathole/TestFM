@@ -9,7 +9,7 @@ def stubbed(reason=None):
     return unittest2.skip(reason)(pytest.mark.stubbed(reason))
 
 
-def run_only_on(server):
+def run_only_on(*server):
     """Decorator to skip tests based on server version.
 
     Usage:
@@ -25,7 +25,7 @@ def run_only_on(server):
     :param str project: Enter 'sat63' , 'sat62' and 'sat61' for specific version
     """
     return pytest.mark.skipif(
-        product() != server,
+        product() not in server,
         reason="Server version is '{0}' and this test will run only "
                "on '{1}' version".format(product(), server)
     )
