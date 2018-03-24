@@ -1,5 +1,8 @@
 TestFM
 =========
+
+[![Build Status](https://travis-ci.org/ntkathole/TestFM.svg?branch=master)](https://travis-ci.org/ntkathole/TestFM) ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
+
 Test suite for Foreman-Maintain(https://github.com/theforeman/foreman_maintain)
 
 # Quickstart
@@ -38,6 +41,9 @@ It is possible to run a specific subset of tests:
     $ pytest --ansible-host-pattern foreman --ansible-user=root --ansible-inventory TestFM/inventory
     tests/test_case.py
 
+## Licensing
+
+WPInstall is licensed under GNU General Public License v3.0. See [LICENSE](https://github.com/bhavin192/wpinstall/blob/master/LICENSE) for the full license text.
     $ pytest --ansible-host-pattern foreman --ansible-user=root  --ansible-inventory TestFM/inventory
     tests/test_case.py::test_case_name
 
@@ -63,3 +69,7 @@ standards. If the command gives no output, then you have passed. If not, then
 address any corrections recommended.
 
 If you have something great, please submit a pull request anyway!
+
+## Licensing
+
+TestFM is licensed under GNU General Public License v3.0. See [LICENSE](https://github.com/ntkathole/TestFM/blob/master/LICENSE) for the full license text.
