@@ -41,9 +41,6 @@ It is possible to run a specific subset of tests:
     $ pytest --ansible-host-pattern foreman --ansible-user=root --ansible-inventory TestFM/inventory
     tests/test_case.py
 
-## Licensing
-
-WPInstall is licensed under GNU General Public License v3.0. See [LICENSE](https://github.com/bhavin192/wpinstall/blob/master/LICENSE) for the full license text.
     $ pytest --ansible-host-pattern foreman --ansible-user=root  --ansible-inventory TestFM/inventory
     tests/test_case.py::test_case_name
 
