@@ -30,16 +30,22 @@ class Base(object):
     def _construct_command(cls, options=None):
         """Build a foreman-maintain command based on the options passed"""
         tail = u''
-
-        for key, val in options.items():
-            if val is None:
-                continue
-            if val is True:
-                tail += u' --{0}'.format(key)
-            elif val is not False:
-                if isinstance(val, list):
-                    val = ','.join(str(el) for el in val)
-                tail += u' --{0}="{1}"'.format(key, val)
+        if isinstance(options, list):
+            for val in options:
+                if val is None:
+                    continue
+                else:
+                    tail += u' {0}'.format(val)
+        else:
+            for key, val in options.items():
+                if val is None:
+                    continue
+                if val is True:
+                    tail += u' --{0}'.format(key)
+                elif val is not False:
+                    if isinstance(val, list):
+                        val = ','.join(str(el) for el in val)
+                    tail += u' --{0}="{1}"'.format(key, val)
 
         cmd = u'foreman-maintain {0} {1} {2}'.format(
             cls.command_base,
@@ -256,6 +262,32 @@ class Base(object):
          katello-service-restart"""
 
         cls.command_sub = 'hammer-setup'
+
+        if options is None:
+            options = {}
+
+        result = cls._construct_command(options)
+
+        return result
+
+    @classmethod
+    def run_online_backup(cls, options=None):
+        """Build foreman-maintain backup online"""
+
+        cls.command_sub = 'online'
+
+        if options is None:
+            options = {}
+
+        result = cls._construct_command(options)
+
+        return result
+
+    @classmethod
+    def run_offline_backup(cls, options=None):
+        """Build foreman-maintain offline online"""
+
+        cls.command_sub = 'offline'
 
         if options is None:
             options = {}
