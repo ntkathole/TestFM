@@ -19,8 +19,10 @@ def test_positive_foreman_maintain_upgrade_list(ansible_module):
     satellite_version = str(ansible_module.command(
         "rpm -q 'satellite' --queryformat='%{VERSION}'"
     ).values()[0]['stdout'])
-    if satellite_version.startswith('6.3'):
-        versions = ['6.3.z']
+    if satellite_version.startswith('6.4'):
+        versions = ['6.4.z']
+    elif satellite_version.startswith('6.3'):
+        versions = ['6.3.z', '6.4']
     elif satellite_version.startswith('6.2'):
         versions = ['6.2.z', '6.3']
     else:

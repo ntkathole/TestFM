@@ -1,5 +1,5 @@
 from TestFM.advanced import Advanced
-from TestFM.decorators import run_only_on
+from TestFM.decorators import run_only_on, stubbed
 
 
 def test_positive_foreman_maintain_service_restart(ansible_module):
@@ -39,9 +39,6 @@ def test_positive_foreman_maintain_hammer_setup(ansible_module):
 
     :CaseImportance: Critical
     """
-    setup = ansible_module.command("pip install pexpect")
-    for result in setup.values():
-        assert result["rc"] == 0
     try:
         setup = ansible_module.command("hammer -u admin -p changeme user update"
                                        " --login admin "
@@ -49,11 +46,7 @@ def test_positive_foreman_maintain_hammer_setup(ansible_module):
         for result in setup.values():
             print(result)
             assert result["rc"] == 0
-        output = ansible_module.expect(
-            command=Advanced.run_hammer_setup(),
-            responses={"Hammer username \[admin\]: ": "admin",
-                       "Hammer password: ": "JMNBzJ*a-4;XH!C~"}
-        )
+        output = ansible_module.command(Advanced.run_hammer_setup())
         for result in output.values():
             print(result)
             assert "New settings saved into /root/foreman_maintain/config/" \
@@ -68,6 +61,7 @@ def test_positive_foreman_maintain_hammer_setup(ansible_module):
             assert result["rc"] == 0
 
 
+@stubbed
 def test_positive_foreman_maintain_packages_update(ansible_module):
     """Packages update using advanced procedure run
 

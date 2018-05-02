@@ -119,9 +119,9 @@ class Base(object):
     @classmethod
     def run_katello_service_stop(cls, options=None):
         """Build foreman-maintain advanced procedure run
-         katello-service-stop"""
+         service-stop"""
 
-        cls.command_sub = 'katello-service-stop'
+        cls.command_sub = 'service-stop'
 
         if options is None:
             options = {}
@@ -133,9 +133,9 @@ class Base(object):
     @classmethod
     def run_katello_service_start(cls, options=None):
         """Build foreman-maintain advanced procedure run
-         katello-service-start"""
+         service-start"""
 
-        cls.command_sub = 'katello-service-start'
+        cls.command_sub = 'service-start'
 
         if options is None:
             options = {}
