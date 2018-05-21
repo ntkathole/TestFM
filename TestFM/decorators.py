@@ -25,7 +25,8 @@ def run_only_on(*server):
         def test_health_check():
             # test code continues here
 
-    :param str project: Enter 'sat63' , 'sat62' and 'sat61' for specific version
+    :param str project: Enter 'sat63' , 'sat62' and 'sat61' for specific
+     version
     """
     return pytest.mark.skipif(
         product() not in server,

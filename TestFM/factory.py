@@ -15,7 +15,8 @@ def check_health():
         --tags tags                   Limit only for specific set of labels.
                                       (Use list-tags command to see available
                                       tags) (comma-separated list)
-        -y, --assumeyes               Automatically answer yes for all questions
+        -y, --assumeyes               Automatically answer yes for all
+                                      questions
         -w, --whitelist whitelist     Comma-separated list of labels of steps
                                       to be ignored
         -f, --force                   Force steps that would be skipped as they
@@ -48,7 +49,8 @@ def advanced_procedure_run_service_restart():
                                       include (comma-separated list)
         --exclude EXCLUDE             A comma-separated list of services to
                                       skip (comma-separated list)
-        -y, --assumeyes               Automatically answer yes for all questions
+        -y, --assumeyes               Automatically answer yes for all
+                                      questions
         -w, --whitelist whitelist     Comma-separated list of labels of steps
                                       to be ignored
         -f, --force                   Force steps that would be skipped as they

@@ -1,5 +1,5 @@
 from TestFM.advanced import Advanced
-from TestFM.decorators import run_only_on, stubbed
+from TestFM.decorators import stubbed
 
 
 def test_positive_foreman_maintain_service_restart(ansible_module):
@@ -11,13 +11,13 @@ def test_positive_foreman_maintain_service_restart(ansible_module):
         1. foreman-maintain should be installed.
 
     :steps:
-        1. Run foreman-maintain advanced procedure run katello-service-restart
+        1. Run foreman-maintain advanced procedure run service-restart
 
     :expectedresults: Katello-service should restart.
 
     :CaseImportance: Critical
     """
-    contacted = ansible_module.command(Advanced.run_katello_service_restart())
+    contacted = ansible_module.command(Advanced.run_service_restart())
     for result in contacted.values():
         print(result['stdout'])
         assert "FAIL" not in result['stdout']
@@ -41,7 +41,8 @@ def test_positive_foreman_maintain_hammer_setup(ansible_module):
     :CaseImportance: Critical
     """
     try:
-        setup = ansible_module.command("hammer -u admin -p changeme user update"
+        setup = ansible_module.command("hammer -u admin -p changeme"
+                                       " user update"
                                        " --login admin "
                                        "--password 'JMNBzJ*a-4;XH!C~'")
         for result in setup.values():

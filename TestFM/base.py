@@ -103,11 +103,11 @@ class Base(object):
         return result
 
     @classmethod
-    def run_katello_service_restart(cls, options=None):
+    def run_service_restart(cls, options=None):
         """Build foreman-maintain advanced procedure run
-         katello-service-restart"""
+         service-restart"""
 
-        cls.command_sub = 'katello-service-restart'
+        cls.command_sub = 'service-restart'
 
         if options is None:
             options = {}
@@ -131,7 +131,7 @@ class Base(object):
         return result
 
     @classmethod
-    def run_katello_service_start(cls, options=None):
+    def run_service_start(cls, options=None):
         """Build foreman-maintain advanced procedure run
          service-start"""
 
@@ -285,9 +285,35 @@ class Base(object):
 
     @classmethod
     def run_offline_backup(cls, options=None):
-        """Build foreman-maintain offline online"""
+        """Build foreman-maintain backup offline"""
 
         cls.command_sub = 'offline'
+
+        if options is None:
+            options = {}
+
+        result = cls._construct_command(options)
+
+        return result
+
+    @classmethod
+    def service_restart(cls, options=None):
+        """Build foreman-maintain service"""
+
+        cls.command_sub = 'restart'
+
+        if options is None:
+            options = {}
+
+        result = cls._construct_command(options)
+
+        return result
+
+    @classmethod
+    def service_start(cls, options=None):
+        """Build foreman-maintain service start"""
+
+        cls.command_sub = 'start'
 
         if options is None:
             options = {}
