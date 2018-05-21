@@ -3,6 +3,9 @@ from TestFM.helpers import product
 import pytest
 import unittest2
 
+# Run for capsule
+capsule = pytest.mark.capsule
+
 
 def stubbed(reason=None):
     """Skips test due to non-implentation or some other reason."""

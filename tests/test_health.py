@@ -143,36 +143,6 @@ def test_negative_check_hammer_ping(ansible_module):
         print(result['stdout'])
 
 
-def test_negative_check_hammer_ping_assumeyes(ansible_module):
-    """Verify hammer ping check once failed restart the services
-
-    :id:
-
-    :setup:
-        1. foreman-maintain should be installed.
-
-    :steps:
-        1. Run Katello-service stop
-        2. Run foreman-maintain health check --label hammer-ping --assumeyes
-
-    :expectedresults: Health check should perform.
-
-    :CaseImportance: Critical
-    """
-    setup = ansible_module.command(Advanced.run_katello_service_stop())
-    for result in setup.values():
-        print(result['stdout'])
-    contacted = ansible_module.command(Health.check({
-        'label': 'hammer-ping'
-    }) + ' -y')
-    for result in contacted.values():
-        print(result)
-        assert "FAIL" in result['stdout']
-    verify = ansible_module.command("systemctl is-active foreman-tasks.service")
-    for result in verify.values():
-        assert "inactive" not in result['stdout']
-
-
 def test_positive_pre_upgrade_health_check(ansible_module):
     """Verify pre-upgrade health checks
 

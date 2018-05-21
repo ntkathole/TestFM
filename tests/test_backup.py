@@ -1,7 +1,9 @@
 from TestFM.backup import Backup
+from TestFM.decorators import capsule
 BACKUP_DIR = '/tmp/'
 
 
+@capsule
 def test_positive_backup_online(ansible_module):
     """Take online backup of server
 
@@ -26,6 +28,7 @@ def test_positive_backup_online(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_skip_pulp_content(ansible_module):
     """Take online backup skipping pulp content of server
 
@@ -51,6 +54,7 @@ def test_positive_backup_online_skip_pulp_content(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_preserve_directory(ansible_module):
     """Take online backup of server preserving directory
 
@@ -76,6 +80,7 @@ def test_positive_backup_online_preserve_directory(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_split_pulp_tar(ansible_module):
     """Take online backup of server spliting pulp tar
 
@@ -102,6 +107,7 @@ def test_positive_backup_online_split_pulp_tar(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_incremental(ansible_module):
     """Take incremental online backup of server
 
@@ -137,6 +143,7 @@ def test_positive_backup_online_incremental(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_caspule_features(ansible_module):
     """Take online backup of server including capsule features dns, tftp, etc.
 
@@ -163,6 +170,7 @@ def test_positive_backup_online_caspule_features(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_online_all(ansible_module):
     """Take online backup of server providing all options
 
@@ -199,6 +207,7 @@ def test_positive_backup_online_all(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline(ansible_module):
     """Take offline backup of server
 
@@ -223,6 +232,7 @@ def test_positive_backup_offline(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_skip_pulp_content(ansible_module):
     """Take offline backup of server skipping pulp content
 
@@ -248,6 +258,7 @@ def test_positive_backup_offline_skip_pulp_content(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_preserve_directory(ansible_module):
     """Take offline backup of server preserving directory
 
@@ -274,6 +285,7 @@ def test_positive_backup_offline_preserve_directory(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_split_pulp_tar(ansible_module):
     """Take offline backup of server splitting pulp tar
 
@@ -301,6 +313,7 @@ def test_positive_backup_offline_split_pulp_tar(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_incremental(ansible_module):
     """Take offline incremental backup of server
 
@@ -336,6 +349,7 @@ def test_positive_backup_offline_incremental(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_capsule_features(ansible_module):
     """Take offline backup of server including capsule features dns, tftp, etc.
 
@@ -363,6 +377,7 @@ def test_positive_backup_offline_capsule_features(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_logical(ansible_module):
     """Take offline backup of server include-db-dumps
 
@@ -388,6 +403,7 @@ def test_positive_backup_offline_logical(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
+@capsule
 def test_positive_backup_offline_all(ansible_module):
     """Take offline backup of server providing all options
 

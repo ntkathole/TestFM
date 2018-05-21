@@ -23,9 +23,8 @@ def test_positive_foreman_maintain_service_restart(ansible_module):
         assert "FAIL" not in result['stdout']
 
 
-@run_only_on('sat61', 'sat62')
 def test_positive_foreman_maintain_hammer_setup(ansible_module):
-    """List versions this system is upgradable to
+    """Hammer setup using advanced procedure
 
     :id:
 
@@ -33,9 +32,11 @@ def test_positive_foreman_maintain_hammer_setup(ansible_module):
         1. foreman-maintain should be installed.
 
     :steps:
-        1. Run foreman-maintain advanced procedure run katello-service restart
+        1. Change password for user to any string
+        2. Run advanced procedure run hammer-setup
+        3. Change password to original password
 
-    :expectedresults: Katello-service should restart.
+    :expectedresults: Hammer setup should successful.
 
     :CaseImportance: Critical
     """
