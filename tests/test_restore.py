@@ -7,7 +7,7 @@ from TestFM.restore import Restore
 def test_positive_restore_online_backup(ansible_module):
     """Restore online backup of server
 
-    :id:
+    :id: 3b83f757-2bf8-49ff-b237-bd466c5694bb
 
     :setup:
 

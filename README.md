@@ -33,15 +33,15 @@ TestFM/inventory file.
 
 That done, you can run tests using pytest :
 
-    $ pytest --ansible-host-pattern foreman --ansible-user=root  --ansible-inventory TestFM/inventory
+    $ pytest --ansible-host-pattern satellite --ansible-user=root  --ansible-inventory TestFM/inventory
     tests/
 
 It is possible to run a specific subset of tests:
 
-    $ pytest --ansible-host-pattern foreman --ansible-user=root --ansible-inventory TestFM/inventory
+    $ pytest --ansible-host-pattern satellite --ansible-user=root --ansible-inventory TestFM/inventory
     tests/test_case.py
 
-    $ pytest --ansible-host-pattern foreman --ansible-user=root  --ansible-inventory TestFM/inventory
+    $ pytest --ansible-host-pattern satellite --ansible-user=root  --ansible-inventory TestFM/inventory
     tests/test_case.py::test_case_name
 
 ## Want to contribute?

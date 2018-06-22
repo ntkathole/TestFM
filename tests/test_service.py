@@ -4,7 +4,7 @@ from TestFM.service import Service
 def test_positive_foreman_maintain_service_restart(ansible_module):
     """Restart services using service restart
 
-    :id:
+    :id: c5a38994-8c14-40c7-bc6a-1cfc68fc2d28
 
     :setup:
         1. foreman-maintain should be installed.
@@ -25,7 +25,7 @@ def test_positive_foreman_maintain_service_restart(ansible_module):
 def test_positive_foreman_maintain_service_start(ansible_module):
     """Start services using service start
 
-    :id:
+    :id: fa3b02a9-b441-413b-b9d2-1a59d04f285c
 
     :setup:
         1. foreman-maintain should be installed.

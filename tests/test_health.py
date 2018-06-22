@@ -5,7 +5,7 @@ from TestFM.health import Health
 def test_positive_foreman_maintain_health_list(ansible_module):
     """List health check in foreman-maintain
 
-    :id:
+    :id: 976ef4cd-e028-4545-91bb-72433d40d7ee
 
     :setup:
         1. foreman-maintain should be installed.
@@ -26,7 +26,7 @@ def test_positive_foreman_maintain_health_list(ansible_module):
 def test_positive_foreman_maintain_health_list_tags(ansible_module):
     """List tags for health check in foreman-maintain
 
-    :id:
+    :id: d0a6c8c1-8266-464a-bfdf-01d405dd9bd2
 
     :setup:
         1. foreman-maintain should be installed.
@@ -47,7 +47,7 @@ def test_positive_foreman_maintain_health_list_tags(ansible_module):
 def test_positive_list_health_check_by_tags(ansible_module):
     """List health check in foreman-maintain by tags
 
-    :id:
+    :id: 420d8e62-84d8-4496-8c24-037bd23febe9
 
     :setup:
         1. foreman-maintain should be installed.
@@ -71,7 +71,7 @@ def test_positive_list_health_check_by_tags(ansible_module):
 def test_positive_foreman_maintain_health_check(ansible_module):
     """Verify foreman-maintain health check
 
-    :id:
+    :id: bfff93dd-adde-4630-8411-1bb6b74daddd
 
     :setup:
         1. foreman-maintain should be installed.
@@ -92,7 +92,7 @@ def test_positive_foreman_maintain_health_check(ansible_module):
 def test_positive_check_hammer_ping(ansible_module):
     """Verify hammer ping check
 
-    :id:
+    :id: b1eec8cb-9f94-439a-b5e7-8621cb35501f
 
     :setup:
         1. foreman-maintain should be installed.
@@ -115,7 +115,7 @@ def test_positive_check_hammer_ping(ansible_module):
 def test_negative_check_hammer_ping(ansible_module):
     """Verify hammer ping check
 
-    :id:
+    :id: ecdc5bfb-2adf-49f6-948d-995dae34bcd3
 
     :setup:
         1. foreman-maintain should be installed.
@@ -146,7 +146,7 @@ def test_negative_check_hammer_ping(ansible_module):
 def test_positive_pre_upgrade_health_check(ansible_module):
     """Verify pre-upgrade health checks
 
-    :id:
+    :id: f52bd43e-79cd-488b-adbb-3c9e5bac32cc
 
     :setup:
         1. foreman-maintain should be installed.

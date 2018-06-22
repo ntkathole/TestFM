@@ -7,7 +7,7 @@ BACKUP_DIR = '/tmp/'
 def test_positive_backup_online(ansible_module):
     """Take online backup of server
 
-    :id:
+    :id: 962d21de-04bc-43fd-9076-cdbfdb9d798e
 
     :setup:
 
@@ -32,7 +32,7 @@ def test_positive_backup_online(ansible_module):
 def test_positive_backup_online_skip_pulp_content(ansible_module):
     """Take online backup skipping pulp content of server
 
-    :id:
+    :id: 0a041aed-8578-40d9-8044-6a1db0daba59
 
     :setup:
 
@@ -58,7 +58,7 @@ def test_positive_backup_online_skip_pulp_content(ansible_module):
 def test_positive_backup_online_preserve_directory(ansible_module):
     """Take online backup of server preserving directory
 
-    :id:
+    :id: 343c79fd-5fd3-45a3-bb75-c807817f2970
 
     :setup:
 
@@ -84,7 +84,7 @@ def test_positive_backup_online_preserve_directory(ansible_module):
 def test_positive_backup_online_split_pulp_tar(ansible_module):
     """Take online backup of server spliting pulp tar
 
-    :id:
+    :id: f2c7173f-a955-4c0c-a232-60f6161fda81
 
     :setup:
 
@@ -111,7 +111,7 @@ def test_positive_backup_online_split_pulp_tar(ansible_module):
 def test_positive_backup_online_incremental(ansible_module):
     """Take incremental online backup of server
 
-    :id:
+    :id: e4af1804-8479-47c0-9f50-460b6edbe9e0
 
     :setup:
 
@@ -147,7 +147,7 @@ def test_positive_backup_online_incremental(ansible_module):
 def test_positive_backup_online_caspule_features(ansible_module):
     """Take online backup of server including capsule features dns, tftp, etc.
 
-    :id:
+    :id: a36f8a53-a233-4bc8-bd0f-c4629e383cb9
 
     :setup:
 
@@ -174,7 +174,7 @@ def test_positive_backup_online_caspule_features(ansible_module):
 def test_positive_backup_online_all(ansible_module):
     """Take online backup of server providing all options
 
-    :id:
+    :id: 86a93e4f-61e3-4206-ae28-ce01136c5518
 
     :setup:
 
@@ -211,7 +211,7 @@ def test_positive_backup_online_all(ansible_module):
 def test_positive_backup_offline(ansible_module):
     """Take offline backup of server
 
-    :id:
+    :id: 2bbd15de-59f4-4ea0-8016-4cc951c6e4b9
 
     :setup:
 
@@ -236,7 +236,7 @@ def test_positive_backup_offline(ansible_module):
 def test_positive_backup_offline_skip_pulp_content(ansible_module):
     """Take offline backup of server skipping pulp content
 
-    :id:
+    :id: 8c31620f-a1f1-4422-8609-3fd8e05d6056
 
     :setup:
 
@@ -262,7 +262,7 @@ def test_positive_backup_offline_skip_pulp_content(ansible_module):
 def test_positive_backup_offline_preserve_directory(ansible_module):
     """Take offline backup of server preserving directory
 
-    :id:
+    :id: 99fc9319-d495-481a-b345-5f6ca12c4225
 
     :setup:
 
@@ -289,7 +289,7 @@ def test_positive_backup_offline_preserve_directory(ansible_module):
 def test_positive_backup_offline_split_pulp_tar(ansible_module):
     """Take offline backup of server splitting pulp tar
 
-    :id:
+    :id: bdd19e11-89b6-471c-af65-359046686473
 
     :setup:
 
@@ -317,7 +317,7 @@ def test_positive_backup_offline_split_pulp_tar(ansible_module):
 def test_positive_backup_offline_incremental(ansible_module):
     """Take offline incremental backup of server
 
-    :id:
+    :id: 27df1544-0bc6-4922-a45c-3c7f3b805a1d
 
     :setup:
 
@@ -353,7 +353,7 @@ def test_positive_backup_offline_incremental(ansible_module):
 def test_positive_backup_offline_capsule_features(ansible_module):
     """Take offline backup of server including capsule features dns, tftp, etc.
 
-    :id:
+    :id: 31f93423-affb-4f41-a666-993aa0a56e12
 
     :setup:
 
@@ -381,7 +381,7 @@ def test_positive_backup_offline_capsule_features(ansible_module):
 def test_positive_backup_offline_logical(ansible_module):
     """Take offline backup of server include-db-dumps
 
-    :id:
+    :id: 26c9b3cb-f96a-44bb-828b-69865099af39
 
     :setup:
 
@@ -407,7 +407,7 @@ def test_positive_backup_offline_logical(ansible_module):
 def test_positive_backup_offline_all(ansible_module):
     """Take offline backup of server providing all options
 
-    :id:
+    :id: 2065e58a-4710-4315-af9e-e7049fabf323
 
     :setup:
 

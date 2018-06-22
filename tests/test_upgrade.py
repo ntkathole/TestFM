@@ -4,7 +4,7 @@ from TestFM.upgrade import Upgrade
 def test_positive_foreman_maintain_upgrade_list(ansible_module):
     """List versions this system is upgradable to
 
-    :id:
+    :id: 12efec41-4f09-4199-a20c-a4525e773b78
 
     :setup:
 
