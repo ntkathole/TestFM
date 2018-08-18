@@ -52,7 +52,7 @@ question or concerns, feel free to reach out to the team.
 ### Recommended
 
 - Import modules in alphabetical order.
-- Every method and function will have a properly formatted docstring.
+- Every method and function will have a properly formatted docstrings.
 
 
 In order to ensure you are able to pass the Travis CI build,
